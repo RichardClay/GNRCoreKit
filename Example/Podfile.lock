@@ -1,0 +1,23 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - GNRCoreKit (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - GNRCoreKit (from `../`)
+
+EXTERNAL SOURCES:
+  GNRCoreKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  GNRCoreKit: ff0e30b569dc1272a70015039bd8d841eb28830c
+
+PODFILE CHECKSUM: b1d7c7a3924377f79d7253dc4a65f7c690bb5bea
+
+COCOAPODS: 1.2.1
