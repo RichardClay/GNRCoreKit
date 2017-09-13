@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://http://git.oschina.net/uupt/GNRCoreKit'
+  s.homepage         = 'https://git.oschina.net/uupt/GNRCoreKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ly918@qq.com' => 'ly918@qq.com' }
