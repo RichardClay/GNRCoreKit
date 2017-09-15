@@ -9,8 +9,15 @@
 #ifndef GNRCoreKitHeader_h
 #define GNRCoreKitHeader_h
 
+//MARK: - Define
+#import "GNRMacro.h"
+
+//MARK: - UI
+
 #import "GNRTextView.h"
 #import "GNRAlertViewController.h"
+
+//MARK: - Foundation
 
 #import "UIColor+GNRExtension.h"
 #import "UIImage+GNRColor.h"

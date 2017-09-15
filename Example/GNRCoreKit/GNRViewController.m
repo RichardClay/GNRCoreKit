@@ -7,9 +7,14 @@
 //
 
 #import "GNRViewController.h"
-#import "GNRCoreKitHeader.h"
+#import <GNRCoreKit/GNRCoreKitHeader.h>
 
 @interface GNRViewController ()
+
+__PROPERTY_AT_COPY__(NSString, *name);
+
+__PROPERTY_AT_ASSIGN__(NSInteger, count);
+
 
 @end
 
