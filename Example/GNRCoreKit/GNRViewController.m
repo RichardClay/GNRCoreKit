@@ -19,7 +19,10 @@ __PROPERTY_AT_ASSIGN__(NSInteger, count);
 @end
 
 @implementation GNRViewController
-
+{
+    GNRSwitch *sw;
+    
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,8 +33,19 @@ __PROPERTY_AT_ASSIGN__(NSInteger, count);
     UIImageView * imageView = [[UIImageView alloc]initWithImage:image];
     [self.view addSubview:imageView];
     
-    
+    sw = [[GNRSwitch alloc]init];
+    sw.frame = CGRectMake(200, 200, 45*2, 25*2);
+    [self.view addSubview:sw];
+    [sw addTarget:self action:@selector(switchPressed:) forControlEvents:UIControlEventValueChanged];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [sw setOn:!sw.isOn animated:YES];
+}
+
+- (void)switchPressed:(GNRSwitch *)sender{
+    NSLog(@"value %@ %d",sender, sender.isOn);
 }
 
 - (void)didReceiveMemoryWarning

@@ -24,5 +24,7 @@
 #import "UIApplication+GNRHelper.h"
 #import "NSString+GNRExtension.h"
 
+//MARK: - Custom
+#import "GNRSwitch.h"
 
 #endif /* GNRCoreKitHeader_h */
