@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GNRSwitch : UIControl
+IB_DESIGNABLE @interface GNRSwitch : UIControl
 
-@property (nonatomic, assign, getter=isOn)BOOL on;
-@property (nonatomic, strong)UIColor *onTintColor;
-@property (nonatomic, strong)UIColor *offTintColor;
+@property (nonatomic, assign, getter=isOn)IBInspectable BOOL on;
+@property (nonatomic, strong)IBInspectable UIColor *onTintColor;
+@property (nonatomic, strong)IBInspectable UIColor *offTintColor;
 
 - (void)setOn:(BOOL)on animated:(BOOL)animated;
 
 @end
+

@@ -14,7 +14,7 @@
     CGFloat _padding;
     UIColor *_onTintColor;
     UIColor *_offTintColor;
-    CGRect _defaultBounds;
+    CGRect _defaultSize;
 }
 @property (nonatomic,strong)UIView * topView;
 @end
@@ -54,19 +54,13 @@
 }
 
 - (void)initData{
-    _defaultBounds = CGRectMake(0, 0, 45, 25);
-    self.bounds = _defaultBounds;
     _padding = 5.f;
+    _on = YES;
+    self.bounds = CGRectMake(0, 0, 45, 25);
     self.backgroundColor = self.onTintColor;
     self.backgroundColor = [UIColor whiteColor];
     self.layer.masksToBounds = YES;
-    _on = YES;
     [self performAnimation:NO];
-}
-
-- (void)setFrame:(CGRect)frame{
-    frame.size = _defaultBounds.size;
-    [super setFrame:frame];
 }
 
 - (void)setOnTintColor:(UIColor *)onTintColor{
@@ -104,7 +98,6 @@
 - (void)setOn:(BOOL)on animated:(BOOL)animated{
     if (_on != on) {
         _on = on;
-        [self valueChanged];
         [self performAnimation:animated];
     }
 }
@@ -112,10 +105,6 @@
 - (void)performAnimation:(BOOL)animated{
     [self setNeedsLayout];
     [self updateWitnAnimated:animated];
-}
-
-- (void)valueChanged{
-    [self sendActionsForControlEvents:UIControlEventValueChanged];
 }
 
 - (void)updateWitnAnimated:(BOOL)animated{
@@ -128,14 +117,14 @@
     CGFloat sizeHeight = CGRectGetHeight(self.bounds) - 2 * _padding;
     CGFloat scale = 1.28;
     CGFloat frameY = _padding;
-
+    
     //scale
     [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         self.topView.frame = CGRectMake((CGRectGetWidth(self.bounds)-sizeHeight)/2.0, frameY, sizeHeight * scale, sizeHeight);
     } completion:^(BOOL finished) {
         
     }];
-
+    
     //frame
     CGFloat frameX = self.isOn?(CGRectGetWidth(self.bounds)-_padding-sizeHeight):_padding;
     [UIView animateWithDuration:duration delay:duration options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -155,7 +144,12 @@
 
 - (void)endTrackingWithTouch:(nullable UITouch *)touch withEvent:(nullable UIEvent *)event{
     [self setOn:!self.isOn animated:YES];
+    [self valueChanged];
 }
 
+- (void)valueChanged{
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
+}
 
 @end
+
