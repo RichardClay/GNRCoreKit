@@ -60,7 +60,8 @@
     self.backgroundColor = self.onTintColor;
     self.backgroundColor = [UIColor whiteColor];
     self.layer.masksToBounds = YES;
-    self.on = YES;
+    _on = YES;
+    [self performAnimation:NO];
 }
 
 - (void)setFrame:(CGRect)frame{
@@ -104,9 +105,13 @@
     if (_on != on) {
         _on = on;
         [self valueChanged];
-        [self setNeedsLayout];
-        [self updateWitnAnimated:animated];
+        [self performAnimation:animated];
     }
+}
+
+- (void)performAnimation:(BOOL)animated{
+    [self setNeedsLayout];
+    [self updateWitnAnimated:animated];
 }
 
 - (void)valueChanged{
