@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GNRCoreKit'
-  s.version          = '0.2.2'
+  s.version          = '0.2.3'
   s.summary          = 'UU跑腿iOS公用核心组件 GNRCoreKit.'
 
 # This description is used to generate tags and improve search results.
@@ -39,4 +39,6 @@ TODO: Add long description of the pod here.
   s.public_header_files = 'GNRCoreKit/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Masonry'
+
 end
