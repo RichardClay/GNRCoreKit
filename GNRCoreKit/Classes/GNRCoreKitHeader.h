@@ -17,11 +17,13 @@
 #import "GNRTextView.h"
 #import "GNRAlertViewController.h"
 
-//MARK: - Foundation
+//MARK: - Extension
 
 #import "UIColor+GNRExtension.h"
 #import "UIImage+GNRColor.h"
 #import "UIApplication+GNRHelper.h"
+#import "UIView+GNRSafeArea.h"
+#import "UIScrollView+GNRSafeArea.h"
 #import "NSString+GNRExtension.h"
 
 //MARK: - Custom

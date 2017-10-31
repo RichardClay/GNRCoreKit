@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - GNRCoreKit (0.2.3):
+  - GNRCoreKit (0.2.4):
     - Masonry
   - Masonry (1.1.0)
 
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  GNRCoreKit: 8f5613ee81688260e1115daa070b85f5b6ba34fb
+  GNRCoreKit: c3f2a378c331f82bd7a46543edbbef52308f3098
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: b1d7c7a3924377f79d7253dc4a65f7c690bb5bea
