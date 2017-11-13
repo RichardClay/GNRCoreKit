@@ -12,6 +12,14 @@
 
 + (BOOL)G_Is_IPhoneX;
 
++ (CGFloat)g_safeAreaBottomConstant;
+
++ (CGFloat)g_statusBarHeight;
+
++ (CGFloat)g_navigationBarHeight;
+
++ (CGFloat)g_safeAreaTopConstant;//statusBar + navigationBar
+
 - (UIEdgeInsets)g_safeAreaInsets;
 
 - (id)g_masSafeAreaInsets;
