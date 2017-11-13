@@ -11,14 +11,6 @@
 
 @implementation UIView (GNRSafeArea)
 
-+ (BOOL)G_Is_IPhoneX{
-    if ([UIScreen instancesRespondToSelector:@selector(currentMode)]) {
-        return CGSizeEqualToSize(CGSizeMake(1125.f, 2436.f), [UIScreen mainScreen].currentMode.size);
-    } else {
-        return NO;
-    }
-}
-
 - (UIEdgeInsets)g_safeAreaInsets{
     if (@available(iOS 11.0, *)) {
         return self.safeAreaInsets;
@@ -48,17 +40,42 @@
 }
 
 - (CGFloat)g_safeAreaBottomConstant{
+    return [UIView g_safeAreaBottomConstant];
+}
+
+- (CGFloat)g_navigationBarHeight{
+    return [UIView g_navigationBarHeight];
+}
+
+- (CGFloat)g_statusBarHeight{
+    return [UIView g_statusBarHeight];
+}
+
+//statusBar + navigationBar
+- (CGFloat)g_safeAreaTopConstant{
+    return [UIView g_safeAreaTopConstant];
+}
+
++ (BOOL)G_Is_IPhoneX{
+    if ([UIScreen instancesRespondToSelector:@selector(currentMode)]) {
+        return CGSizeEqualToSize(CGSizeMake(1125.f, 2436.f), [UIScreen mainScreen].currentMode.size);
+    } else {
+        return NO;
+    }
+}
+
++ (CGFloat)g_safeAreaBottomConstant{
     if ([UIView G_Is_IPhoneX]) {
         return 34.f;
     }
     return 0;
 }
 
-- (CGFloat)g_navigationBarHeight{
++ (CGFloat)g_navigationBarHeight{
     return 44.f;
 }
 
-- (CGFloat)g_statusBarHeight{
++ (CGFloat)g_statusBarHeight{
     if ([UIView G_Is_IPhoneX]) {
         return 44.f;
     }
@@ -66,8 +83,9 @@
 }
 
 //statusBar + navigationBar
-- (CGFloat)g_safeAreaTopConstant{
++ (CGFloat)g_safeAreaTopConstant{
     return self.g_statusBarHeight + self.g_navigationBarHeight;
 }
 
 @end
+
