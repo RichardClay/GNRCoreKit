@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GNRCoreKit'
-  s.version          = '0.2.5'
+  s.version          = '0.2.6'
   s.summary          = 'UU跑腿iOS公用核心组件 GNRCoreKit.'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,8 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://git.oschina.net/uupt/GNRCoreKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'ly918@qq.com' => 'ly918@qq.com' }
+  #s.author           = { 'ly918@qq.com' => 'ly918@qq.com' }
+  s.author           = { 'huagongzi2011@126.com' => 'hua0007' }
   s.source           = { :git => 'https://git.oschina.net/uupt/GNRCoreKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

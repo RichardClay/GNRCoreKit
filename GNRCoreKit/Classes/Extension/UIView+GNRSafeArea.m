@@ -57,11 +57,21 @@
 }
 
 + (BOOL)G_Is_IPhoneX{
-    if ([UIScreen instancesRespondToSelector:@selector(currentMode)]) {
-        return CGSizeEqualToSize(CGSizeMake(1125.f, 2436.f), [UIScreen mainScreen].currentMode.size);
-    } else {
-        return NO;
+    
+    /**iPhone X 、iPhone XS、iPhone XS Max、iPhone XR 适配*/
+    BOOL iPhoneXSeries = NO;
+    if (UIDevice.currentDevice.userInterfaceIdiom != UIUserInterfaceIdiomPhone) {
+        return iPhoneXSeries;
     }
+    
+    if (@available(iOS 11.0, *)) {
+        UIWindow *mainWindow = [[[UIApplication sharedApplication] delegate] window];
+        if (mainWindow.safeAreaInsets.bottom > 0.0) {
+            iPhoneXSeries = YES;
+        }
+    }
+    
+    return iPhoneXSeries;
 }
 
 + (CGFloat)g_safeAreaBottomConstant{
