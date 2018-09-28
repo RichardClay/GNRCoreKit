@@ -1,0 +1,6 @@
+framework module GNRCoreKit {
+  umbrella header "GNRCoreKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
