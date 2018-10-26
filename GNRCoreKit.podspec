@@ -24,8 +24,7 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://git.oschina.net/uupt/GNRCoreKit'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  #s.author           = { 'ly918@qq.com' => 'ly918@qq.com' }
-  s.author           = { 'huagongzi2011@126.com' => 'hua0007' }
+  s.author           = { '750460196@qq.com' => 'sun' }
   s.source           = { :git => 'https://git.oschina.net/uupt/GNRCoreKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
